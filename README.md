@@ -1,20 +1,20 @@
 # Library Management System
 
-A console-based Library Management System developed using Java. This project manages books, book issuing and returning, waiting lists, and overdue book tracking.
+A console-based Library Management System developed using Java. This project manages books, issuing and returning operations, student waiting lists, and overdue book tracking.
 
 ## Features
 
-- Add new books with unique IDs
-- Display all books with their availability status
+- Add books with unique IDs
+- Display all available book records
 - Search books by ID
-- Remove books, with protection against deleting issued books
+- Remove books with protection against deleting issued books
 - Issue and return books
 - Automatically issue returned books to the first student in the waiting list
-- Manage waiting lists using a manually implemented Queue
+- Manage waiting lists using a manually implemented queue
 - Track overdue books using due dates
 - Save and load book records using file handling
 - Preserve waiting lists across program restarts
-- Validate user input, including duplicate IDs, non-positive IDs, and empty book details
+- Validate user input, including duplicate and non-positive book IDs
 
 ## Technologies Used
 
@@ -23,39 +23,45 @@ A console-based Library Management System developed using Java. This project man
 - Singly Linked List
 - Queue (manual implementation)
 - File Handling
-- LocalDate for issue and due dates
+- `LocalDate` for issue and due dates
 
 ## Project Structure
 
-- `Main.java` — Menu and user interaction
-- `Book.java` — Book data and linked-list node
-- `Library.java` — Library operations and business logic
-- `WaitQueue.java` — Manually implemented waiting queue
-- `books.txt` — Persistent book and waiting-list data
+```text
+Library-Management-System/
+├── src/
+│   ├── Main.java
+│   ├── Book.java
+│   ├── Library.java
+│   └── WaitQueue.java
+├── README.md
+├── .gitignore
+└── books.txt
+```
 
 ## How to Run
 
-1. Open the project in IntelliJ IDEA.
-2. Ensure a compatible JDK is configured.
-3. Open `Main.java`.
-4. Run the `main()` method.
-5. Use the console menu to manage books.
+1. Clone or download this repository.
+2. Open the project in IntelliJ IDEA or another Java IDE.
+3. Ensure a compatible JDK is installed.
+4. Run `Main.java`.
+5. Follow the menu displayed in the console.
 
-## Data Persistence
+## Data Storage
 
-Book information, issue status, issue dates, due dates, and waiting lists are stored in `books.txt` so that data can be restored when the program starts again.
+The application uses a local text file named `books.txt` to save book records and restore them when the program starts again.
 
 ## Learning Outcomes
 
-This project demonstrates linked lists, queues, Java classes and objects, input validation, date handling, and file-based persistence.
+- Understanding linked lists and queues
+- Implementing basic CRUD operations
+- Working with classes and objects in Java
+- Handling files for data persistence
+- Using dates to track book due dates
+- Validating user input and handling common errors
 
-## Future Improvements
+## Author
 
-- Add a graphical user interface
-- Store data in a database
-- Add student accounts and authentication
-- Add fine calculation for overdue books
+**Sidharth Pandey**
 
----
-
-**Project Type:** Java Console Application
+GitHub: [sidharthpandey1](https://github.com/sidharthpandey1)
